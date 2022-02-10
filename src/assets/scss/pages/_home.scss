@@ -1,15 +1,15 @@
 /* Home Page */
 
-.home-body-example {
+#app-home {
+  background-color: #e6e6e6;
 
-  .placeholder-content {
-    height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .cinemaddict-app {
+    background-color: #fff;
+    @include border-radius;
+    @include big-drop-shadow;
 
-    p {
-      margin-bottom: 0;
+    &__inner {
+      padding: 50px;
     }
   }
 }
