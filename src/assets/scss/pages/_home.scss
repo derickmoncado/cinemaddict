@@ -5,11 +5,26 @@
 
   .cinemaddict-app {
     background-color: #fff;
+    padding: 50px;
     @include border-radius;
     @include big-drop-shadow;
 
     &__inner {
-      padding: 50px;
+      border: 2px solid red;
+
+      .cinemaddict-app__header {
+        border: 2px solid blue;
+        display: flex;
+
+        & > div {
+          border: 1px solid;
+          width: 33.33%;
+        }
+      }
+
+      .cinemaddict-app__body {
+        border: 2px solid green;
+      }
     }
   }
 }
