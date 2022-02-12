@@ -2,6 +2,7 @@
 
 #app-home {
   background-color: #e6e6e6;
+  padding: 100px;
 
   .cinemaddict-app {
     background-color: #fff;
@@ -16,9 +17,16 @@
         border: 2px solid blue;
         display: flex;
 
-        & > div {
-          border: 1px solid;
-          width: 33.33%;
+        &__logo {
+
+          img {
+            max-width: 260px;
+          }
+
+          p {
+            margin-left: 10px;
+            font-style: italic;
+          }
         }
       }
 
