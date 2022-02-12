@@ -11,25 +11,20 @@
     @include big-drop-shadow;
 
     &__inner {
-      border: 2px solid red;
 
       .cinemaddict-app__header {
-        border: 2px solid blue;
+        margin-bottom: 60px;
         display: flex;
-
-        & > div {
-          border: 1px solid black;
-        }
 
         &__logo {
           width: 25%;
 
           img {
             max-width: 260px;
+            margin-bottom: 4px;
           }
 
           p {
-            margin-left: 10px;
             font-style: italic;
             margin-bottom: 0;
           }
@@ -42,7 +37,7 @@
         &__add {
           width: 25%;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
 
           button {
@@ -52,7 +47,21 @@
       }
 
       .cinemaddict-app__body {
-        border: 2px solid green;
+
+        &__entry-row {
+          height: 200px;
+          border-top: 2px solid #e6e6e6;
+
+          p {
+            font-size: 22px;
+            font-family: 'Poppins';
+            font-weight: 500;
+            transform: translateY(-50%);
+            background-color: #fff;
+            display: inline-block;
+            padding-right: 8px;
+          }
+        }
       }
     }
   }
