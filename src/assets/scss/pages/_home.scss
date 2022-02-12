@@ -17,7 +17,12 @@
         border: 2px solid blue;
         display: flex;
 
+        & > div {
+          border: 1px solid black;
+        }
+
         &__logo {
+          width: 25%;
 
           img {
             max-width: 260px;
@@ -26,6 +31,22 @@
           p {
             margin-left: 10px;
             font-style: italic;
+            margin-bottom: 0;
+          }
+        }
+
+        &__search {
+          width: 50%;
+        }
+
+        &__add {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            @include pill-btn();
           }
         }
       }
