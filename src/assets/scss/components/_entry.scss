@@ -1,0 +1,50 @@
+/* Entry Styles */
+
+@mixin entry {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 2px solid #e6e6e6;
+  display: inline-block;
+  padding: 10px;
+  display: flex;
+  width: 380px;
+  position: relative;
+
+  &__image {
+    background-color: #ccc;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 12px;
+  }
+
+  &__info {
+    width: calc(100% - 110px);
+    padding-right: 85px;
+
+    span {
+      display: block;
+
+      &:last-child {
+        font-size: 12px;
+        font-style: italic;
+        color: #ccc;
+      }
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__streaming-on {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 80px;
+    border: 1px solid #e6e6e6;
+  }
+}

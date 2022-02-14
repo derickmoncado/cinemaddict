@@ -8,6 +8,10 @@
   box-shadow: 0px 0px 24px 0 rgba(0,0,0,0.25);
 }
 
+@mixin small-drop-shadow {
+  box-shadow: 0px 0px 8px 0 rgba(0,0,0,0.25);
+}
+
 @mixin pill-btn($bg-color: #000) {
   height: 50px;
   width: 192px;
@@ -25,11 +29,11 @@
   &:hover {
     transition-property: background-color, box-shadow;
     transition-duration: 0.3s;
-    background-color: lighten($bg-color, 15%);
+    background-color: lighten($bg-color, 20%);
     @include big-drop-shadow();
   }
 
   &:active {
-    zoom: 0.97;
+    background-color: darken($bg-color, 20%);
   }
 }

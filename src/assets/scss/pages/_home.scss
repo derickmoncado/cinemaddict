@@ -49,17 +49,24 @@
       .cinemaddict-app__body {
 
         &__entry-row {
-          height: 200px;
           border-top: 2px solid #e6e6e6;
+          position: relative;
+          padding: 25px 0;
+          margin-bottom: 50px;
 
           p {
+            position: absolute;
+            top: -19px;
             font-size: 22px;
             font-family: 'Poppins';
             font-weight: 500;
-            transform: translateY(-50%);
             background-color: #fff;
             display: inline-block;
             padding-right: 8px;
+          }
+
+          .entry {
+            @include entry;
           }
         }
       }
