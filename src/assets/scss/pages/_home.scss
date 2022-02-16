@@ -67,6 +67,10 @@
 
           .entry {
             @include entry;
+
+            &--button {
+              @include entry-btn;
+            }
           }
         }
       }
