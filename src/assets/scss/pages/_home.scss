@@ -41,7 +41,7 @@
           align-items: center;
 
           button {
-            @include pill-btn();
+            @include pill-btn(#000, 192px);
           }
         }
       }
