@@ -21,11 +21,15 @@
   &__info {
     width: calc(100% - 110px);
     padding-right: 85px;
+    position: relative;
 
     span {
       display: block;
+      line-height: 20px;
 
       &:last-child {
+        position: absolute;
+        bottom: 0;
         font-size: 12px;
         font-style: italic;
         color: #ccc;
@@ -37,6 +41,30 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 5px 12px;
+
+      &:hover {
+        background-color: #e6e6e6;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 8px;
+
+        &:hover {
+
+          i {
+            color: $red;
+          }
+        }
+      }
+    }
   }
 
   &__streaming-on {
