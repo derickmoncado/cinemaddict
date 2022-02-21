@@ -29,10 +29,13 @@
     }
   
     .modal-body {
-  
+      padding: 0;
+      margin-bottom: 50px;
     }
   
     .modal-footer {
+      border: none;
+      padding: 0;
   
       button {
         @include pill-btn(#000, 192px);
