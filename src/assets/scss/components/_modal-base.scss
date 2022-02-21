@@ -31,6 +31,56 @@
     .modal-body {
       padding: 0;
       margin-bottom: 50px;
+
+      form {
+
+        div[class^="col-"] {
+          margin-bottom: 10px;
+        }
+
+        input, select {
+          border: #eaeaea 2px solid;
+          height: 50px;
+          border-radius: 25px;
+
+          &::placeholder {
+            opacity: 0.2;
+          }
+
+          &[type=checkbox] {
+            height: 25px;
+            width: 25px;
+            border-radius: 4px;
+            margin-right: 6px;
+          }
+
+          option {
+            color: red;
+          }
+        }
+
+        .checkboxes {
+          
+          &__inner {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            .form-check {
+              display: inline-block;
+              margin-right: 15px;
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              .form-check-label {
+                margin-top: 4px;
+              }
+            }
+          }
+        }
+      }
     }
   
     .modal-footer {
