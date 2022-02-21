@@ -30,7 +30,7 @@
   
     .modal-body {
       padding: 0;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
 
       form {
 
@@ -47,10 +47,10 @@
             opacity: 0.2;
           }
 
-          &[type=checkbox] {
-            height: 25px;
-            width: 25px;
-            border-radius: 4px;
+          &[type=radio] {
+            height: 24px;
+            width: 24px;
+            border-radius: 12px;
             margin-right: 6px;
           }
 
@@ -59,7 +59,7 @@
           }
         }
 
-        .checkboxes {
+        .radio-btns {
           
           &__inner {
             display: flex;
