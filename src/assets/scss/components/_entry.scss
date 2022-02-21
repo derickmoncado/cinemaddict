@@ -41,8 +41,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
 
     button {
       background: none;
@@ -79,5 +78,14 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+  }
+
+  &:hover {
+    cursor: pointer;
+    
+    .entry__actions {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
