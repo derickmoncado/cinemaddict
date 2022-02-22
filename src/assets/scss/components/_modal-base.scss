@@ -47,15 +47,10 @@
             opacity: 0.2;
           }
 
-          &[type=radio] {
+          &[type="radio"] {
             height: 24px;
             width: 24px;
             border-radius: 12px;
-            margin-right: 6px;
-          }
-
-          option {
-            color: red;
           }
         }
 
@@ -74,7 +69,15 @@
                 margin-right: 0;
               }
 
+              .form-check-input, .form-check-label {
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+
               .form-check-label {
+                padding-left: 6px;
                 margin-top: 4px;
               }
             }
