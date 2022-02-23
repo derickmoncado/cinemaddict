@@ -41,10 +41,29 @@
 
 	// Elements
 	const formSubmitBtn = document.getElementById("formSubmitBtn");
-	
+
+	// Read form data
+	const readFormData = () => {
+		let formData = {};
+		formData["entryTitle"] = document.getElementById("entryTitle").value;
+		formData["yearReleased"] = document.getElementById("yearReleased").value;
+		formData["genre"] = document.getElementById("genre").value;
+		formData["directedBy"] = document.getElementById("directedBy").value;
+		formData["streamingOn"] = document.getElementById("streamingOn").value;
+		formData["status"] = document.getElementById("status").value;
+		formData["movie"] = document.getElementById("movie").value;
+		formData["series"] = document.getElementById("series").value;
+		formData["documentary"] = document.getElementById("documentary").value;
+		formData["runningTime"] = document.getElementById("runningTime").value;
+		//formData["id"] = document.getElementById("wineID").value || "";
+		return formData;
+	};
+
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		e.preventDefault();
 		console.log("submit button was clicked!");
+		readFormData();
+		console.log("is this the form data?", readFormData());
 	});
 })();
