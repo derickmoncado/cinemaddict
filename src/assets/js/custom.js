@@ -39,5 +39,12 @@
 	/* Begin App JS */
 	// =================================================================================
 
-	// asdf
+	// Elements
+	const formSubmitBtn = document.getElementById("formSubmitBtn");
+	
+	// On form submit
+	formSubmitBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		console.log("submit button was clicked!");
+	});
 })();
