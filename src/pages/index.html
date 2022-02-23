@@ -47,7 +47,7 @@ Title: home (index.html)
           <div class="cinemaddict-app__body__entry-row">
             <p>Want to Watch</p>
             <div class="entry entry--button">
-             <button type="button"><i class="bi bi-plus"></i></button>
+             <button class="add-entry-btn" type="button"><i class="bi bi-plus"></i></button>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ Title: home (index.html)
           <div class="modal-body">
             <form id="addEntryForm" class="row g-3">
               <div class="col-md-6">
-                <label for="entryTitle" class="form-label">Title</label>
+                <label for="entryTitle" class="form-label">Title*</label>
                 <input type="text" class="form-control" id="entryTitle" placeholder="The Avengers">
               </div>
               <div class="col-md-6">
@@ -86,7 +86,7 @@ Title: home (index.html)
                 <input type="text" class="form-control" id="directedBy" placeholder="Joss Whedon">
               </div>
               <div class="col-md-12">
-                <label for="streamingOn" class="form-label">Streaming On</label>
+                <label for="streamingOn" class="form-label">Streaming On*</label>
                 <select id="streamingOn" class="form-select">
                   <option selected>Choose...</option>
                   <option>Netlfix</option>
@@ -100,7 +100,7 @@ Title: home (index.html)
                 </select>
               </div>
               <div class="col-md-12">
-                <label for="status" class="form-label">Status</label>
+                <label for="status" class="form-label">Status*</label>
                 <select id="status" class="form-select">
                   <option selected>Currently Watching</option>
                   <option>Want to Watch</option>

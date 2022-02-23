@@ -12,6 +12,7 @@
   box-shadow: 0px 0px 8px 0 rgba(0,0,0,0.5);
 }
 
+// Pill Button
 @mixin pill-btn($bg-color: #000, $width) {
   height: 50px;
   width: $width;
@@ -39,6 +40,7 @@
   }
 }
 
+// Row Entry Button
 @mixin entry-btn {
   height: 124px;
 

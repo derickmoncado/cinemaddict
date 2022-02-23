@@ -3,7 +3,7 @@
 
   .modal-content {
     margin: 0 auto;
-    border-radius: 12px;
+    @include border-radius;
     padding: 40px 50px 50px 50px;
   
     .modal-header {
@@ -50,7 +50,7 @@
           &[type="radio"] {
             height: 24px;
             width: 24px;
-            border-radius: 12px;
+            @include border-radius;
           }
         }
 
