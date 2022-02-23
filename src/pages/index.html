@@ -10,6 +10,8 @@ Title: home (index.html)
     <!-- app -->
     <div class="cinemaddict-app">
       <div class="cinemaddict-app__inner">
+
+        <!-- Header -->
         <div class="cinemaddict-app__header">
           <div class="cinemaddict-app__header__logo">
             <img src="assets/images/cinemaddict-logo.png" alt="CinemaAddict" />
@@ -24,6 +26,8 @@ Title: home (index.html)
         </div>
 
         <div class="cinemaddict-app__body">
+
+          <!-- Row -->
           <div class="cinemaddict-app__body__entry-row">
             <p>Currently Watching</p>
             
@@ -44,17 +48,18 @@ Title: home (index.html)
             </div>
           </div>
 
+          <!-- Row -->
           <div class="cinemaddict-app__body__entry-row">
             <p>Want to Watch</p>
             <div class="entry entry--button">
-             <button class="add-entry-btn" type="button"><i class="bi bi-plus"></i></button>
+             <button class="add-entry-btn" type="button" data-bs-toggle="modal" data-bs-target="#addEntryModal"><i class="bi bi-plus"></i></button>
             </div>
           </div>
 
+          <!-- Row -->
           <div class="cinemaddict-app__body__entry-row">
             <p>Finished Watching</p>
           </div>
-
         </div>
       </div>
     </div>
