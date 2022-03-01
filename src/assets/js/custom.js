@@ -79,6 +79,6 @@
 		console.log("submit button was clicked!");
 
 		readFormData();
-		console.log("is this the form data?", readFormData());
+		console.log("form data:", readFormData());
 	});
 })();
