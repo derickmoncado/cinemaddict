@@ -59,10 +59,25 @@
 		return formData;
 	};
 
+	// Clear form data
+	const resetForm = () => {
+		document.getElementById("entryTitle").value = "";
+		document.getElementById("yearReleased").value = "";
+		document.getElementById("genre").value = "";
+		document.getElementById("directedBy").value = "";
+		document.getElementById("streamingOn").value = "";
+		document.getElementById("status").value = "";
+		document.getElementById("movie").value = "";
+		document.getElementById("series").value = "";
+		document.getElementById("documentary").value = "";
+		document.getElementById("runningTime").value = "";
+	}
+
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		e.preventDefault();
 		console.log("submit button was clicked!");
+		
 		readFormData();
 		console.log("is this the form data?", readFormData());
 	});
