@@ -10,6 +10,13 @@
       padding: 0;
       border: none;
       margin-bottom: 40px;
+
+      h5 {
+
+        i {
+          color: $green;
+        }
+      }
   
       .modal-title {
         font-size: 32px;
