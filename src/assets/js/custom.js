@@ -41,6 +41,7 @@
 
 	// Elements
 	const formSubmitBtn = document.getElementById("formSubmitBtn");
+	const forms = document.querySelectorAll('.needs-validation');
 
 	// Read form data
 	const readFormData = () => {
@@ -76,9 +77,23 @@
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		e.preventDefault();
+		
+		// Form validation - Loop over them and prevent submission
+    forms.forEach((form) => {
+      form.addEventListener('click', function (e) {
+        if (!form.checkValidity()) {
+          e.preventDefault()
+          e.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
 		console.log("submit button was clicked!");
 
 		readFormData();
 		console.log("form data:", readFormData());
 	});
+
+  
 })();
