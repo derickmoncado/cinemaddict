@@ -74,7 +74,7 @@ Title: home (index.html)
           </div>
           <div class="modal-body">
             <!-- Form -->
-            <form id="addEntryForm" class="row g-3 needs-validation" novalidate>
+            <form id="addEntryForm" class="row g-3 needs-validation">
               <div class="col-md-6">
                 <label for="entryTitle" class="form-label">Title*</label>
                 <input type="text" class="form-control" id="entryTitle" placeholder="The Avengers" required>
@@ -96,7 +96,7 @@ Title: home (index.html)
               </div>
               <div class="col-md-12">
                 <label for="streamingOn" class="form-label">Streaming On*</label>
-                <select id="streamingOn" class="form-select">
+                <select id="streamingOn" class="form-select" required>
                   <option selected>Choose...</option>
                   <option>Netlfix</option>
                   <option>Hulu</option>
@@ -110,7 +110,7 @@ Title: home (index.html)
               </div>
               <div class="col-md-12">
                 <label for="status" class="form-label">Status*</label>
-                <select id="status" class="form-select">
+                <select id="status" class="form-select" required>
                   <option selected>Currently Watching</option>
                   <option>Want to Watch</option>
                   <option>Finished Watching</option>
@@ -120,19 +120,19 @@ Title: home (index.html)
                 <p>Media Type*</p>
                 <div class="radio-btns__inner">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="select-media-type" id="movie" checked>
+                    <input class="form-check-input" type="radio" name="select-media-type" id="movie" checked required>
                     <label class="form-check-label" for="movie">
                       Movie
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="select-media-type" id="series">
+                    <input class="form-check-input" type="radio" name="select-media-type" id="series" required>
                     <label class="form-check-label" for="series">
                       Series
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="select-media-type" id="documentary">
+                    <input class="form-check-input" type="radio" name="select-media-type" id="documentary" required>
                     <label class="form-check-label" for="documentary">
                       Documentary
                     </label>
@@ -149,7 +149,7 @@ Title: home (index.html)
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" form="addEntryForm" class="btn btn-primary" id="formSubmitBtn"><i class="bi bi-check-circle-fill"></i>Submit</button>
+            <button type="submit" form="addEntryForm" class="btn btn-primary" id="formSubmitBtn" data-bs-target="#addEntryConfirmModal" data-bs-toggle="modal"><i class="bi bi-check-circle-fill"></i>Submit</button>
           </div>
         </div>
       </div>
@@ -175,3 +175,44 @@ Title: home (index.html)
 
   </div>
 </section>
+
+
+
+
+
+<!-- 
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Show a second modal and hide this one with the button below.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Hide this modal and show the first with the button below.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
