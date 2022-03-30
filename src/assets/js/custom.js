@@ -104,6 +104,7 @@
 		
 		readFormData();
 		console.log("form data:", readFormData());
+		resetForm();
 	});
 
   
