@@ -75,26 +75,23 @@
 	}
 
 	// Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
+	forms.forEach((form) => {
+		form.addEventListener('submit', (e) => {
+			if (!form.checkValidity()) {
+				e.preventDefault()
+				e.stopPropagation()
+			}
 
-        form.classList.add('was-validated')
-      }, false)
-    })
+			form.classList.add('was-validated')
+		}, false)
+	})
 
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
 		//e.preventDefault();		
 		readFormData();
-		console.log("form data:", readFormData());
-
-		
+		console.log("form data:", readFormData());	
 		resetForm();
 	});
 
