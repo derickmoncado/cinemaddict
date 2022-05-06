@@ -73,31 +73,31 @@ Title: home (index.html)
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+
             <!-- Form -->
-            <form id="addEntryForm" class="row g-3 needs-validation">
+            <form class="row g-3 needs-validation" novalidate>
               <div class="col-md-6">
                 <label for="entryTitle" class="form-label">Title*</label>
-                <input type="text" class="form-control" id="entryTitle" placeholder="The Avengers" required>
-                <div class="invalid-feedback">
-                  Please provide a Title
-                </div>
+                <input type="text" class="form-control" id="entryTitle" value="" placeholder="The Avengers" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a title</div>
               </div>
               <div class="col-md-6">
-                <label for="yearReleased" class="form-label">Year Released</label>
-                <input type="text" class="form-control" id="yearReleased" placeholder="2012">
+                <label for="entryTear" class="form-label">Year Released</label>
+                <input type="text" class="form-control" id="entryYear" value="" placeholder="2012">
               </div>
               <div class="col-md-6">
-                <label for="genre" class="form-label">Genre</label>
-                <input type="text" class="form-control" id="genre" placeholder="Action">
+                <label for="entryGenre" class="form-label">Genre</label>
+                <input type="text" class="form-control" id="entryGenre" placeholder="Action">
               </div>
               <div class="col-md-6">
-                <label for="directedBy" class="form-label">Directed By</label>
-                <input type="text" class="form-control" id="directedBy" placeholder="Joss Whedon">
+                <label for="entryDirectedBy" class="form-label">Directed By</label>
+                <input type="text" class="form-control" id="entryDirectedBy" placeholder="Joss Whedon">
               </div>
               <div class="col-md-12">
-                <label for="streamingOn" class="form-label">Streaming On*</label>
-                <select id="streamingOn" class="form-select" required>
-                  <option selected>Choose...</option>
+                <label for="entryStreamingOn" class="form-label">Streaming On*</label>
+                <select class="form-select" id="entryStreamingOn" required>
+                  <option selected disabled value="">Choose...</option>
                   <option>Netlfix</option>
                   <option>Hulu</option>
                   <option>Disney+</option>
@@ -107,55 +107,55 @@ Title: home (index.html)
                   <option>Peacock</option>
                   <option>AppleTV+</option>
                 </select>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please select an option</div>
               </div>
               <div class="col-md-12">
-                <label for="status" class="form-label">Status*</label>
-                <select id="status" class="form-select" required>
-                  <option selected>Currently Watching</option>
+                <label for="entryStatus" class="form-label">Status*</label>
+                <select class="form-select" id="entryStatus" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Currently Watching</option>
                   <option>Want to Watch</option>
                   <option>Finished Watching</option>
                 </select>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please select an option</div>
               </div>
               <div class="radio-btns col-6">
                 <p>Media Type*</p>
                 <div class="radio-btns__inner">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="select-media-type" id="movie" checked required>
-                    <label class="form-check-label" for="movie">
-                      Movie
-                    </label>
+                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                    <label class="form-check-label" for="validationFormCheck3">Movie</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="select-media-type" id="series" required>
-                    <label class="form-check-label" for="series">
-                      Series
-                    </label>
+                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                    <label class="form-check-label" for="validationFormCheck3">Series</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="select-media-type" id="documentary" required>
-                    <label class="form-check-label" for="documentary">
-                      Documentary
-                    </label>
+                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                    <label class="form-check-label" for="validationFormCheck3">Documentary</label>
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <label for="runningTime" class="form-label">Running Time</label>
-                <input type="text" class="form-control" id="runningTime" placeholder="143 minutes">
+                <label for="entryRunningTime" class="form-label">Running Time</label>
+                <input type="text" class="form-control" id="entryRunningTime" placeholder="143 minutes">
               </div>
-              <!-- <div class="col-12">
-                <button type="submit" form="addEntryForm" class="btn btn-primary" id="formSubmitBtn" data-bs-target="#addEntryConfirmModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="bi bi-check-circle-fill"></i>Submit</button>
-              </div> -->
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" form="addEntryForm" class="btn btn-primary" id="formSubmitBtn" data-bs-target="#addEntryConfirmModal" data-bs-toggle="modal"><i class="bi bi-check-circle-fill"></i>Submit</button>
+            <!-- <button type="submit" form="addEntryForm" class="btn btn-primary" id="formSubmitBtn" data-bs-target="#addEntryConfirmModal" data-bs-toggle="modal"><i class="bi bi-check-circle-fill"></i>Submit</button> -->
+            <button type="submit" form="addEntryForm" class="btn btn-primary" id="formSubmitBtn"><i class="bi bi-check-circle-fill"></i>Submit</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Add entry confirm modal -->
+    <!-- Confirm modal - add entry -->
     <div class="modal fade" id="addEntryConfirmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">

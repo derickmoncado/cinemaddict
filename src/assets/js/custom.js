@@ -1,6 +1,6 @@
-'use strict';
-
+// IIFE
 (function () {
+	'use strict';
 	console.log('document ready!');
 
 	// Appends the 'active' class to nav links
@@ -41,7 +41,7 @@
 
 	// Elements
 	const formSubmitBtn = document.getElementById("formSubmitBtn");
-	const forms = document.querySelectorAll('.needs-validation');
+	const forms = document.querySelectorAll(".needs-validation");
 
 	// Read form data
 	const readFormData = () => {
@@ -74,36 +74,27 @@
 		document.getElementById("runningTime").value = "";
 	}
 
-	// Form validation - Loop over them and prevent submission
-	// forms.forEach((form) => {
-	// 	form.addEventListener("click", function (e) {
-	// 		if (!form.checkValidity()) {
-	// 			e.preventDefault()
-	// 			e.stopPropagation()
-	// 		}
+	// Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
 
-	// 		form.classList.add('was-validated')
-	// 	}, false)
-	// })
+        form.classList.add('was-validated')
+      }, false)
+    })
 
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
-		e.preventDefault();
-		
-		// Form validation - Loop over them and prevent submission
-		forms.forEach((form) => {
-			form.addEventListener("click", function (e) {
-				if (!form.checkValidity()) {
-					e.preventDefault()
-					e.stopPropagation()
-				}
-				form.classList.add('was-validated')
-			}, false)
-		})
-		
-		
+		console.log("formSubmit clicked!");
+		e.preventDefault();		
 		readFormData();
 		console.log("form data:", readFormData());
+
+		
 		resetForm();
 	});
 
