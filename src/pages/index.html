@@ -83,7 +83,7 @@ Title: home (index.html)
                 <div class="invalid-feedback">Please enter a title</div>
               </div>
               <div class="col-md-6">
-                <label for="entryTear" class="form-label">Year Released</label>
+                <label for="entryYear" class="form-label">Year Released</label>
                 <input type="text" class="form-control" id="entryYear" value="" placeholder="2012">
               </div>
               <div class="col-md-6">
@@ -125,16 +125,16 @@ Title: home (index.html)
                 <p>Media Type*</p>
                 <div class="radio-btns__inner">
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                    <label class="form-check-label" for="validationFormCheck3">Movie</label>
+                    <input type="radio" class="form-check-input" id="entryMediaType1" name="radio-stacked" required>
+                    <label class="form-check-label" for="entryMediaType1">Movie</label>
                   </div>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                    <label class="form-check-label" for="validationFormCheck3">Series</label>
+                    <input type="radio" class="form-check-input" id="entryMediaType2" name="radio-stacked" required>
+                    <label class="form-check-label" for="entryMediaType2">Series</label>
                   </div>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-                    <label class="form-check-label" for="validationFormCheck3">Documentary</label>
+                    <input type="radio" class="form-check-input" id="entryMediaType3" name="radio-stacked" required>
+                    <label class="form-check-label" for="entryMediaType3">Documentary</label>
                   </div>
                 </div>
               </div>
@@ -142,8 +142,8 @@ Title: home (index.html)
                 <label for="entryRunningTime" class="form-label">Running Time</label>
                 <input type="text" class="form-control" id="entryRunningTime" placeholder="143 minutes">
               </div>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
+              <div class="modal-footer col-12">
+                <button class="btn btn-primary" type="submit" id="formSubmitBtn"><i class="bi bi-check-circle-fill"></i>Submit</button>
               </div>
             </form>
           </div>

@@ -47,15 +47,15 @@
 	const readFormData = () => {
 		let formData = {};
 		formData["entryTitle"] = document.getElementById("entryTitle").value;
-		formData["yearReleased"] = document.getElementById("yearReleased").value;
-		formData["genre"] = document.getElementById("genre").value;
-		formData["directedBy"] = document.getElementById("directedBy").value;
-		formData["streamingOn"] = document.getElementById("streamingOn").value;
-		formData["status"] = document.getElementById("status").value;
-		formData["movie"] = document.getElementById("movie").value;
-		formData["series"] = document.getElementById("series").value;
-		formData["documentary"] = document.getElementById("documentary").value;
-		formData["runningTime"] = document.getElementById("runningTime").value;
+		formData["entryYear"] = document.getElementById("entryYear").value;
+		formData["entryGenre"] = document.getElementById("entryGenre").value;
+		formData["entryDirectedBy"] = document.getElementById("entryDirectedBy").value;
+		formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
+		formData["entryStatus"] = document.getElementById("entryStatus").value;
+		formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
+		formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
+		formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
+		formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
 		//formData["id"] = document.getElementById("wineID").value || "";
 		return formData;
 	};
@@ -63,15 +63,15 @@
 	// Clear form data
 	const resetForm = () => {
 		document.getElementById("entryTitle").value = "";
-		document.getElementById("yearReleased").value = "";
-		document.getElementById("genre").value = "";
-		document.getElementById("directedBy").value = "";
-		document.getElementById("streamingOn").value = "";
-		document.getElementById("status").value = "";
-		document.getElementById("movie").value = "";
-		document.getElementById("series").value = "";
-		document.getElementById("documentary").value = "";
-		document.getElementById("runningTime").value = "";
+		document.getElementById("entryYear").value = "";
+		document.getElementById("entryGenre").value = "";
+		document.getElementById("entryDirectedBy").value = "";
+		document.getElementById("entryStreamingOn").value = "";
+		document.getElementById("entryStatus").value = "";
+		document.getElementById("entryMediaType1").value = "";
+		document.getElementById("entryMediaType2").value = "";
+		document.getElementById("entryMediaType3").value = "";
+		document.getElementById("entryRunningTime").value = "";
 	}
 
 	// Loop over them and prevent submission
@@ -90,7 +90,7 @@
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
-		e.preventDefault();		
+		//e.preventDefault();		
 		readFormData();
 		console.log("form data:", readFormData());
 
