@@ -9,7 +9,7 @@
 		el.classList.add('active');
 	});
 
-  // Init Swiper (swiper.js)
+	// Init Swiper (swiper.js)
 	const swiper = new Swiper('.swiper', {
 		loop: true,
 		pagination: {
@@ -75,25 +75,36 @@
 	}
 
 	// Loop over them and prevent submission
-	forms.forEach((form) => {
-		form.addEventListener('submit', (e) => {
-			if (!form.checkValidity()) {
-				e.preventDefault()
-				e.stopPropagation()
-			}
+	// forms.forEach((form) => {
+	// 	form.addEventListener('submit', (e) => {
+	// 		if (!form.checkValidity()) {
+	// 			e.preventDefault()
+	// 			e.stopPropagation()
+	// 		}
 
-			form.classList.add('was-validated')
-		}, false)
-	})
+	// 		form.classList.add('was-validated')
+	// 	}, false)
+	// })
 
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
-		//e.preventDefault();		
+		e.preventDefault();
+
+		// forms.forEach((form) => {
+		// 	if (!form.checkValidity()) {
+		// 		e.preventDefault()
+		// 		e.stopPropagation()
+		// 	}
+
+		// 	form.classList.add('was-validated')
+		// })
+
 		readFormData();
-		console.log("form data:", readFormData());	
+		console.log("Log form data:", readFormData());
 		resetForm();
+		console.log('does it ever make it this far?');
 	});
 
-  
+
 })();
