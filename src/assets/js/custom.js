@@ -103,7 +103,6 @@
 		readFormData();
 		console.log("Log form data:", readFormData());
 		resetForm();
-		console.log('does it ever make it this far?');
 	});
 
 
