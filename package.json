@@ -4,7 +4,8 @@
   "description": "Launchpad - A starter kit for front end developers",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/assets/scss/:css/"
+    "sass": "sass --watch src/assets/scss/:css/",
+    "server": "json-server --watch db.json --port 5000"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^3.0.0",
+    "json-server": "^0.17.0",
     "node-sass": "^6.0.1",
     "swiper": "^7.3.1"
   },
