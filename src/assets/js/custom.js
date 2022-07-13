@@ -42,6 +42,7 @@
 	// Elements
 	const formSubmitBtn = document.getElementById("formSubmitBtn");
 	const forms = document.querySelectorAll(".needs-validation");
+	const entryRow = document.querySelectorAll(".cinemaddict-app__body__entry-row");
 
 	// Read form data
 	const readFormData = () => {
@@ -81,6 +82,28 @@
 		const entries = await res.json();
 
 		console.log(entries);
+
+		let template = "";
+		entries.forEach(entry => {
+			template += `
+				<div class="entry">
+					<div class="entry__image"></div>
+					<div class="entry__info">
+						<span>${entry.title}</span>
+						<span>${entry.year}</span>
+						<span>${entry.genre}</span>
+						<span>${entry.mediaType}</span>
+					</div>
+					<div class="entry__actions">
+						<button type="button"><i class="bi bi-pencil-fill"></i></button>
+						<button type="button"><i class="bi bi-trash-fill"></i></button>
+					</div>
+					<div class="entry__streaming-on"></div>
+				</div>
+			`;
+		});
+
+		entryRow.innerHTML = template;
 	};
 
 	fetchEntries();
