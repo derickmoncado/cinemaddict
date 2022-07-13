@@ -74,6 +74,17 @@
 		document.getElementById("entryRunningTime").value = "";
 	}
 
+	// Fetch all entries
+	const fetchEntries = async () => {
+		let uri = "http://localhost:3002/entries";
+		const res = await fetch(uri);
+		const entries = await res.json();
+
+		console.log(entries);
+	};
+
+	fetchEntries();
+
 	// Loop over them and prevent submission
 	// forms.forEach((form) => {
 	// 	form.addEventListener('submit', (e) => {
