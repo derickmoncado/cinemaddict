@@ -22,37 +22,9 @@
         "finishedWatching": false
       },
       "mediaType": {
-        "movie": true,
-        "series": false,
-        "documentary": false
-      },
-      "runningTime": "2hrs 30mins"
-    },
-    {
-      "id": "2",
-      "title": "The Matrix",
-      "year": "1999",
-      "genre": "Action",
-      "directedBy": "The Wachowski Brothers",
-      "streamingOn": {
-        "netflix": "Netflix",
-        "hulu": "Hulu",
-        "disneyPlus": "Disney+",
-        "hboMax": "HBO",
-        "primeVideo": "Prime Video",
-        "paramountPlus": "Paramount+",
-        "peacock": "Peakcock",
-        "appleTvPlus": "AppleTV+"
-      },
-      "status": {
-        "currentlyWatching": true,
-        "wantToWatch": false,
-        "finishedWatching": false
-      },
-      "mediaType": {
-        "movie": true,
-        "series": false,
-        "documentary": false
+        "movie": "Movie",
+        "series": null,
+        "documentary": null
       },
       "runningTime": "2hrs 30mins"
     }
