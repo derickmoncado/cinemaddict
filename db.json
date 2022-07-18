@@ -21,11 +21,7 @@
         "wantToWatch": false,
         "finishedWatching": false
       },
-      "mediaType": {
-        "movie": "Movie",
-        "series": null,
-        "documentary": null
-      },
+      "mediaType": "movie",
       "runningTime": "2hrs 30mins"
     }
   ]
