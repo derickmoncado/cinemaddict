@@ -92,7 +92,7 @@
 					<span>${entry.title}</span>
 					<span>${entry.year}</span>
 					<span>${entry.genre}</span>
-					<span>${entry.mediaType}</span>
+					<span>${entry.mediaType.movie}</span>
 				</div>
 				<div class="entry__actions">
 					<button type="button"><i class="bi bi-pencil-fill"></i></button>
