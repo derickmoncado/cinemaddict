@@ -98,7 +98,7 @@
 					<button type="button"><i class="bi bi-pencil-fill"></i></button>
 					<button type="button"><i class="bi bi-trash-fill"></i></button>
 				</div>
-				<div class="entry__streaming-on"></div>
+				<div class="entry__streaming-on" style="background-image: url('${entry.streamingOn}')"></div> 
 			</div>
 			`;
 		});
