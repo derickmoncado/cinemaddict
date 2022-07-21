@@ -87,7 +87,7 @@
 		entries.forEach(entry => {
 			template += `
 			<div class="entry">
-				<div class="entry__image"></div>
+				<div class="entry__image" style="background-image: url('${entry.image}')"></div>
 				<div class="entry__info">
 					<span>${entry.title}</span>
 					<span>${entry.year}</span>

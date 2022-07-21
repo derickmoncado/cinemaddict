@@ -7,19 +7,21 @@
   display: inline-block;
   padding: 10px;
   display: flex;
-  width: 380px;
+  width: 350px;
   position: relative;
 
   &__image {
     background-color: #ccc;
-    width: 100px;
+    width: 68px;
     height: 100px;
     margin-right: 10px;
-    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__info {
-    width: calc(100% - 110px);
+    width: calc(100% - 80px);
     padding-right: 85px;
     position: relative;
 
