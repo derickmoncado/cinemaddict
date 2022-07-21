@@ -6,13 +6,10 @@
       "year": "1994",
       "genre": "Crime",
       "directedBy": "Quentin Tarantino",
-      "streamingOn": "assets/images/netflix.jpg",
-      "status": {
-        "currentlyWatching": true,
-        "wantToWatch": false,
-        "finishedWatching": false
-      },
-      "mediaType": "movie",
+      "streamingOn": "assets/images/streaming-logos/netflix.jpg",
+      "image": "assets/images/movie-posters/pulp-fiction.jpg",
+      "status": "Currently Watching",
+      "mediaType": "Movie",
       "runningTime": "2hrs 30mins"
     }
   ]
