@@ -108,36 +108,28 @@
 
 	fetchEntries();
 
-	// Loop over them and prevent submission
-	// forms.forEach((form) => {
-	// 	form.addEventListener('submit', (e) => {
-	// 		if (!form.checkValidity()) {
-	// 			e.preventDefault()
-	// 			e.stopPropagation()
-	// 		}
+	// Add entry
+	const addEntry = async (data) => {
+		let uri = "http://localhost:3002/entries";
+		const res = await fetch(uri, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(data)
+		});
+	};
 
-	// 		form.classList.add('was-validated')
-	// 	}, false)
-	// })
 
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
 		e.preventDefault();
 
-		// forms.forEach((form) => {
-		// 	if (!form.checkValidity()) {
-		// 		e.preventDefault()
-		// 		e.stopPropagation()
-		// 	}
-
-		// 	form.classList.add('was-validated')
-		// })
-
 		readFormData();
+		addEntry(readFormData());
 		console.log("Log form data:", readFormData());
 		resetForm();
+		fetchEntries();
 	});
-
-
 })();
