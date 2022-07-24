@@ -43,6 +43,7 @@
 	const formSubmitBtn = document.getElementById("formSubmitBtn");
 	const forms = document.querySelectorAll(".needs-validation");
 	const entryRow = document.querySelector(".currently-watching");
+	const dismissBtn = document.querySelector(".dismissBtn");
 
 	// Read form data
 	const readFormData = () => {
@@ -125,11 +126,20 @@
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
 		e.preventDefault();
-
 		readFormData();
 		addEntry(readFormData());
 		console.log("Log form data:", readFormData());
+		//resetForm();
+		//fetchEntries();
+	});
+
+	// On dismiss button click
+	dismissBtn.addEventListener("click", (e) => {
+		console.log("dismissBtn clicked!");
+		e.preventDefault();
 		resetForm();
 		fetchEntries();
 	});
+
+
 })();

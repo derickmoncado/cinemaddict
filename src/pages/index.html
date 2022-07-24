@@ -28,22 +28,30 @@ Title: home (index.html)
         <div class="cinemaddict-app__body">
 
           <!-- Row -->
-          <div class="cinemaddict-app__body__entry-row currently-watching">
+          <div class="cinemaddict-app__body__entry-row">
             <p>Currently Watching</p>
-            <!-- Entry gets dynamically inject here via JS -->
+            <div class="currently-watching">
+              <!-- Entry gets dynamically inject here via JS -->
+            </div>
           </div>
 
           <!-- Row -->
-          <div class="cinemaddict-app__body__entry-row want-to-watch">
+          <div class="cinemaddict-app__body__entry-row">
             <p>Want to Watch</p>
+            <div class="want-to-watch">
+              <!-- Entry gets dynamically inject here via JS -->
+            </div>
             <div class="entry entry--button">
              <button class="add-entry-btn" type="button" data-bs-toggle="modal" data-bs-target="#addEntryModal"><i class="bi bi-plus"></i></button>
             </div>
           </div>
 
           <!-- Row -->
-          <div class="cinemaddict-app__body__entry-row finished-watching">
+          <div class="cinemaddict-app__body__entry-row">
             <p>Finished Watching</p>
+            <div class="finished-watching">
+              <!-- Entry gets dynamically inject here via JS -->
+            </div>
           </div>
         </div>
       </div>
@@ -142,13 +150,13 @@ Title: home (index.html)
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Add Entry <i class="bi bi-check-circle-fill"></i></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close dismissBtn" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p>You successfully added your entry!</p>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="dismissBtn" data-bs-dismiss="modal">Dismiss</button>
+            <button type="submit" class="btn btn-primary" class="dismissBtn" data-bs-dismiss="modal">Dismiss</button>
           </div>
         </div>
       </div>
