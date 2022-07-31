@@ -2,15 +2,28 @@
   "entries": [
     {
       "id": "1",
-      "title": "Pulp Fiction",
-      "year": "1994",
-      "genre": "Crime",
-      "directedBy": "Quentin Tarantino",
-      "streamingOn": "assets/images/streaming-logos/netflix.jpg",
-      "image": "assets/images/movie-posters/pulp-fiction.jpg",
-      "status": "Currently Watching",
-      "mediaType": "Movie",
-      "runningTime": "2hrs 30mins"
+      "entryTitle": "Pulp Fiction",
+      "entryYear": "1994",
+      "entryGenre": "Crime",
+      "entryDirectedBy": "Quentin Tarantino",
+      "entryStreamingOn": "assets/images/streaming-logos/netflix.jpg",
+      "entryImage": "assets/images/movie-posters/pulp-fiction.jpg",
+      "entryStatus": "Currently Watching",
+      "entryMediaType": "Movie",
+      "entryRunningTime": "2hrs 30mins"
+    },
+    {
+      "entryTitle": "d",
+      "entryYear": "",
+      "entryGenre": "",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "",
+      "entryStatus": "",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "Y2_DVUS"
     }
   ]
 }

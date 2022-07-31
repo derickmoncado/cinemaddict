@@ -88,18 +88,18 @@
 		entries.forEach(entry => {
 			template += `
 			<div class="entry">
-				<div class="entry__image" style="background-image: url('${entry.image}')"></div>
+				<div class="entry__image" style="background-image: url('${entry.entryImage}')"></div>
 				<div class="entry__info">
-					<span>${entry.title}</span>
-					<span>${entry.year}</span>
-					<span>${entry.genre}</span>
-					<span>${entry.mediaType}</span>
+					<span>${entry.entryTitle}</span>
+					<span>${entry.entryYear}</span>
+					<span>${entry.entryGenre}</span>
+					<span>${entry.entryMediaType}</span>
 				</div>
 				<div class="entry__actions">
 					<button type="button"><i class="bi bi-pencil-fill"></i></button>
 					<button type="button"><i class="bi bi-trash-fill"></i></button>
 				</div>
-				<div class="entry__streaming-on" style="background-image: url('${entry.streamingOn}')"></div> 
+				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
 			</div>
 			`;
 		});
