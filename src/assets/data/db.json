@@ -11,58 +11,6 @@
       "entryStatus": "Currently Watching",
       "entryMediaType": "Movie",
       "entryRunningTime": "2hrs 30mins"
-    },
-    {
-      "entryTitle": "b",
-      "entryYear": "",
-      "entryGenre": "",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "",
-      "entryStatus": "",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
-      "entryRunningTime": "",
-      "id": "nHfMz32"
-    },
-    {
-      "entryTitle": "c",
-      "entryYear": "",
-      "entryGenre": "",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "Hulu",
-      "entryStatus": "",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
-      "entryRunningTime": "",
-      "id": "yLNso0B"
-    },
-    {
-      "entryTitle": "",
-      "entryYear": "",
-      "entryGenre": "",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "Hulu",
-      "entryStatus": "",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
-      "entryRunningTime": "",
-      "id": "xzXF6TI"
-    },
-    {
-      "entryTitle": "test",
-      "entryYear": "",
-      "entryGenre": "",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "assets/images/streaming-logos/hulu.jpg",
-      "entryStatus": "",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
-      "entryRunningTime": "",
-      "id": "zyHljnc"
-    }
+    } 
   ]
 }
