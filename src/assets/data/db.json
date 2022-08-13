@@ -11,6 +11,45 @@
       "entryStatus": "Currently Watching",
       "entryMediaType": "Movie",
       "entryRunningTime": "2hrs 30mins"
-    } 
+    },
+    {
+      "entryTitle": "",
+      "entryYear": "",
+      "entryGenre": "",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "assets/images/streaming-logos/peacock.jpg",
+      "entryStatus": "",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "GQ5xywQ"
+    },
+    {
+      "entryTitle": "",
+      "entryYear": "",
+      "entryGenre": "",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "assets/images/streaming-logos/hulu.jpg",
+      "entryStatus": "",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "Vg-T5MF"
+    },
+    {
+      "entryTitle": "",
+      "entryYear": "",
+      "entryGenre": "",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "assets/images/streaming-logos/hulu.jpg",
+      "entryStatus": "",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "LFIbv-A"
+    }
   ]
 }

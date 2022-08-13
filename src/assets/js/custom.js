@@ -125,21 +125,21 @@
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
-		//e.preventDefault();
+		e.preventDefault();
 		readFormData();
 		addEntry(readFormData());
 		console.log("Log form data:", readFormData());
-		//resetForm();
-		//fetchEntries();
-	});
-
-	// On dismiss button click
-	dismissBtn.addEventListener("click", (e) => {
-		console.log("dismissBtn clicked!");
-		e.preventDefault();
 		resetForm();
 		fetchEntries();
 	});
+
+	// On dismiss button click
+	// dismissBtn.addEventListener("click", (e) => {
+	// 	console.log("dismissBtn clicked!");
+	// 	e.preventDefault();
+	// 	resetForm();
+	// 	fetchEntries();
+	// });
 
 
 })();
