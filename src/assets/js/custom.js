@@ -94,7 +94,7 @@
 					<span>${entry.entryYear}</span>
 					<span>${entry.entryGenre}</span>
 					<span>${entry.entryMediaType}</span>
-				</div>
+				</div> q
 				<div class="entry__actions">
 					<button type="button"><i class="bi bi-pencil-fill"></i></button>
 					<button type="button"><i class="bi bi-trash-fill"></i></button>
@@ -125,7 +125,7 @@
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
 		console.log("formSubmit clicked!");
-		e.preventDefault();
+		//e.preventDefault();
 		readFormData();
 		addEntry(readFormData());
 		console.log("Log form data:", readFormData());
