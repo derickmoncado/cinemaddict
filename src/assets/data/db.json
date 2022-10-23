@@ -13,43 +13,30 @@
       "entryRunningTime": "2hrs 30mins"
     },
     {
-      "entryTitle": "",
+      "entryTitle": "test",
       "entryYear": "",
       "entryGenre": "",
       "entryDirectedBy": "",
-      "entryStreamingOn": "assets/images/streaming-logos/peacock.jpg",
+      "entryStreamingOn": "",
       "entryStatus": "",
       "entryMediaType1": "Movie",
       "entryMediaType2": "Series",
       "entryMediaType3": "Documentary",
       "entryRunningTime": "",
-      "id": "GQ5xywQ"
+      "id": "8f3hH3u"
     },
     {
-      "entryTitle": "",
+      "entryTitle": "test 2",
       "entryYear": "",
       "entryGenre": "",
       "entryDirectedBy": "",
-      "entryStreamingOn": "assets/images/streaming-logos/hulu.jpg",
+      "entryStreamingOn": "",
       "entryStatus": "",
       "entryMediaType1": "Movie",
       "entryMediaType2": "Series",
       "entryMediaType3": "Documentary",
       "entryRunningTime": "",
-      "id": "Vg-T5MF"
-    },
-    {
-      "entryTitle": "",
-      "entryYear": "",
-      "entryGenre": "",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "assets/images/streaming-logos/hulu.jpg",
-      "entryStatus": "",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
-      "entryRunningTime": "",
-      "id": "LFIbv-A"
+      "id": "8e53jGu"
     }
   ]
 }

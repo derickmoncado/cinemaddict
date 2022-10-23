@@ -44,6 +44,8 @@
 	const forms = document.querySelectorAll(".needs-validation");
 	const entryRow = document.querySelector(".currently-watching");
 	const dismissBtn = document.querySelector(".dismissBtn");
+	const editEntryBtn = document.getElementById('editEntryBtn');
+	const deleteEntryBtn = document.getElementById('deleteEntryBtn');
 
 	// Read form data
 	const readFormData = () => {
@@ -96,8 +98,8 @@
 					<span>${entry.entryMediaType}</span>
 				</div> q
 				<div class="entry__actions">
-					<button type="button"><i class="bi bi-pencil-fill"></i></button>
-					<button type="button"><i class="bi bi-trash-fill"></i></button>
+					<button type="button" id="editEntryBtn"><i class="bi bi-pencil-fill"></i></button>
+					<button type="button" id="deleteEntryBtn"><i class="bi bi-trash-fill"></i></button>
 				</div>
 				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
 			</div>
@@ -120,6 +122,8 @@
 			body: JSON.stringify(data)
 		});
 	};
+
+
 
 
 	// On form submit
