@@ -47,6 +47,8 @@
 	const editEntryBtn = document.getElementById('editEntryBtn');
 	const deleteEntryBtn = document.getElementById('deleteEntryBtn');
 
+	// =====================================================================
+
 	// Read form data
 	const readFormData = () => {
 		let formData = {};
@@ -64,6 +66,8 @@
 		return formData;
 	};
 
+	// =====================================================================
+
 	// Clear form data
 	const resetForm = () => {
 		document.getElementById("entryTitle").value = "";
@@ -77,6 +81,8 @@
 		document.getElementById("entryMediaType3").value = "";
 		document.getElementById("entryRunningTime").value = "";
 	}
+
+	// =====================================================================
 
 	// Fetch all entries
 	const fetchEntries = async () => {
@@ -98,8 +104,8 @@
 					<span>${entry.entryMediaType}</span>
 				</div> q
 				<div class="entry__actions">
-					<button type="button" id="editEntryBtn"><i class="bi bi-pencil-fill"></i></button>
-					<button type="button" id="deleteEntryBtn"><i class="bi bi-trash-fill"></i></button>
+					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn"><i class="bi bi-pencil-fill"></i></button>
+					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')"><i class="bi bi-trash-fill"></i></button>
 				</div>
 				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
 			</div>
@@ -110,6 +116,8 @@
 	};
 
 	fetchEntries();
+
+	// =====================================================================
 
 	// Add entry
 	const addEntry = async (data) => {
@@ -123,8 +131,19 @@
 		});
 	};
 
+	// =====================================================================
 
+	// Add entry
+	const deleteEntry = async (id) => {
+		let uri = `http://localhost:3002/entries/${id}`;
+		const res = await fetch(uri, {
+			method: "DELETE"
+		});
+		alert("Entry deleted!");
+		fetchEntries();
+	};
 
+	// =====================================================================
 
 	// On form submit
 	formSubmitBtn.addEventListener("click", (e) => {
