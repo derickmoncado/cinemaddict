@@ -34,67 +34,69 @@
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl)
 	})
+})();
 
-	// =================================================================================
-	/* Begin App JS */
-	// =================================================================================
 
-	// Elements
-	const formSubmitBtn = document.getElementById("formSubmitBtn");
-	const forms = document.querySelectorAll(".needs-validation");
-	const entryRow = document.querySelector(".currently-watching");
-	const dismissBtn = document.querySelector(".dismissBtn");
-	const editEntryBtn = document.getElementById('editEntryBtn');
-	const deleteEntryBtn = document.getElementById('deleteEntryBtn');
+// =================================================================================
+/* Begin App JS */
+// =================================================================================
 
-	// =====================================================================
+// Elements
+const formSubmitBtn = document.getElementById("formSubmitBtn");
+const forms = document.querySelectorAll(".needs-validation");
+const entryRow = document.querySelector(".currently-watching");
+const dismissBtn = document.querySelector(".dismissBtn");
+const editEntryBtn = document.getElementById('editEntryBtn');
+const deleteEntryBtn = document.getElementById('deleteEntryBtn');
 
-	// Read form data
-	const readFormData = () => {
-		let formData = {};
-		formData["entryTitle"] = document.getElementById("entryTitle").value;
-		formData["entryYear"] = document.getElementById("entryYear").value;
-		formData["entryGenre"] = document.getElementById("entryGenre").value;
-		formData["entryDirectedBy"] = document.getElementById("entryDirectedBy").value;
-		formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
-		formData["entryStatus"] = document.getElementById("entryStatus").value;
-		formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
-		formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
-		formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
-		formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
-		//formData["id"] = document.getElementById("wineID").value || "";
-		return formData;
-	};
+// =====================================================================
 
-	// =====================================================================
+// Read form data
+const readFormData = () => {
+	let formData = {};
+	formData["entryTitle"] = document.getElementById("entryTitle").value;
+	formData["entryYear"] = document.getElementById("entryYear").value;
+	formData["entryGenre"] = document.getElementById("entryGenre").value;
+	formData["entryDirectedBy"] = document.getElementById("entryDirectedBy").value;
+	formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
+	formData["entryStatus"] = document.getElementById("entryStatus").value;
+	formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
+	formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
+	formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
+	formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
+	//formData["id"] = document.getElementById("wineID").value || "";
+	return formData;
+};
 
-	// Clear form data
-	const resetForm = () => {
-		document.getElementById("entryTitle").value = "";
-		document.getElementById("entryYear").value = "";
-		document.getElementById("entryGenre").value = "";
-		document.getElementById("entryDirectedBy").value = "";
-		document.getElementById("entryStreamingOn").value = "";
-		document.getElementById("entryStatus").value = "";
-		document.getElementById("entryMediaType1").value = "";
-		document.getElementById("entryMediaType2").value = "";
-		document.getElementById("entryMediaType3").value = "";
-		document.getElementById("entryRunningTime").value = "";
-	}
+// =====================================================================
 
-	// =====================================================================
+// Clear form data
+const resetForm = () => {
+	document.getElementById("entryTitle").value = "";
+	document.getElementById("entryYear").value = "";
+	document.getElementById("entryGenre").value = "";
+	document.getElementById("entryDirectedBy").value = "";
+	document.getElementById("entryStreamingOn").value = "";
+	document.getElementById("entryStatus").value = "";
+	document.getElementById("entryMediaType1").value = "";
+	document.getElementById("entryMediaType2").value = "";
+	document.getElementById("entryMediaType3").value = "";
+	document.getElementById("entryRunningTime").value = "";
+}
 
-	// Fetch all entries
-	const fetchEntries = async () => {
-		let uri = "http://localhost:3002/entries";
-		const res = await fetch(uri);
-		const entries = await res.json();
+// =====================================================================
 
-		console.log(entries);
+// Fetch all entries
+const fetchEntries = async () => {
+	let uri = "http://localhost:3002/entries";
+	const res = await fetch(uri);
+	const entries = await res.json();
 
-		let template = "";
-		entries.forEach(entry => {
-			template += `
+	console.log(entries);
+
+	let template = "";
+	entries.forEach(entry => {
+		template += `
 			<div class="entry">
 				<div class="entry__image" style="background-image: url('${entry.entryImage}')"></div>
 				<div class="entry__info">
@@ -110,57 +112,56 @@
 				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
 			</div>
 			`;
-		});
-
-		entryRow.innerHTML = template;
-	};
-
-	fetchEntries();
-
-	// =====================================================================
-
-	// Handle add entry
-	const addEntry = async (data) => {
-		let uri = "http://localhost:3002/entries";
-		const res = await fetch(uri, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(data)
-		});
-	};
-
-	// =====================================================================
-
-	// Handle delete entry
-	const deleteEntry = async (id) => {
-		let uri = `http://localhost:3002/entries/${id}`;
-		const res = await fetch(uri, {
-			method: "DELETE"
-		});
-		alert("Entry deleted!");
-		fetchEntries();
-	};
-
-	// =====================================================================
-
-	// On form submit
-	formSubmitBtn.addEventListener("click", (e) => {
-		console.log("formSubmit clicked!");
-		e.preventDefault();
-		readFormData();
-		addEntry(readFormData());
-		console.log("Log form data:", readFormData());
-		resetForm();
-		fetchEntries();
 	});
 
-	// On dismiss button click
-	// dismissBtn.addEventListener("click", (e) => {
-	// 	console.log("dismissBtn clicked!");
-	// 	e.preventDefault();
-	// 	resetForm();
-	// 	fetchEntries();
-	// });
-})();
+	entryRow.innerHTML = template;
+};
+
+fetchEntries();
+
+// =====================================================================
+
+// Handle add entry
+const addEntry = async (data) => {
+	let uri = "http://localhost:3002/entries";
+	const res = await fetch(uri, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(data)
+	});
+};
+
+// =====================================================================
+
+// Handle delete entry
+const deleteEntry = async (id) => {
+	let uri = `http://localhost:3002/entries/${id}`;
+	const res = await fetch(uri, {
+		method: "DELETE"
+	});
+	alert("Entry deleted!");
+	fetchEntries();
+};
+
+// =====================================================================
+
+// On form submit
+formSubmitBtn.addEventListener("click", (e) => {
+	console.log("formSubmit clicked!");
+	e.preventDefault();
+	readFormData();
+	addEntry(readFormData());
+	console.log("Log form data:", readFormData());
+	resetForm();
+	fetchEntries();
+});
+
+// On dismiss button click
+// dismissBtn.addEventListener("click", (e) => {
+// 	console.log("dismissBtn clicked!");
+// 	e.preventDefault();
+// 	resetForm();
+// 	fetchEntries();
+// });
