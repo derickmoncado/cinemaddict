@@ -163,6 +163,4 @@
 	// 	resetForm();
 	// 	fetchEntries();
 	// });
-
-
 })();

@@ -1,7 +1,6 @@
 {
   "entries": [
     {
-      "id": "1",
       "entryTitle": "Pulp Fiction",
       "entryYear": "1994",
       "entryGenre": "Crime",
@@ -10,7 +9,8 @@
       "entryImage": "assets/images/movie-posters/pulp-fiction.jpg",
       "entryStatus": "Currently Watching",
       "entryMediaType": "Movie",
-      "entryRunningTime": "2hrs 30mins"
+      "entryRunningTime": "2hrs 30mins",
+      "id": "1"
     },
     {
       "entryTitle": "test",

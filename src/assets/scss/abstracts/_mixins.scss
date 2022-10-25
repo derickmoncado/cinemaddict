@@ -43,13 +43,13 @@
 // Row Entry Button
 @mixin entry-btn {
   height: 124px;
+  border: 2px solid #e6e6e6;
 
   button {
-    @include border-radius;
-    border: 2px solid #e6e6e6;
     background: none;
+    border: none;
     outline: none;
-    width: 32.33%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -59,13 +59,17 @@
       font-size: 48px;
       color: #e6e6e6;
     }
+  }
 
-    &:hover {
-      border-color: #000;
-  
-      i {
-        color: inherit;
-      }
+  &:hover {
+    border-color: #000;
+
+    i {
+      color: inherit;
+    }
+
+    button {
+      color: inherit;
     }
   }
 }
