@@ -54,7 +54,8 @@
           padding: 25px 0;
           margin-bottom: 50px;
 
-          p {
+          
+          & > p {
             position: absolute;
             top: -19px;
             font-size: 22px;
@@ -65,11 +66,25 @@
             padding-right: 8px;
           }
 
-          .entry {
-            @include entry;
+          .currently-watching {
+            display: flex;
+            flex-direction: column;
 
-            &--button {
-              @include entry-btn;
+            @media (min-width: 992px) {
+              flex-direction: row;
+              flex-wrap: wrap;
+            }
+
+            .entry {
+              @include entry;
+
+              &:last-child {
+                margin-right: 0;
+              }
+  
+              &--button {
+                @include entry-btn;
+              }
             }
           }
         }
