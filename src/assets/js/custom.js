@@ -119,7 +119,7 @@
 
 	// =====================================================================
 
-	// Add entry
+	// Handle add entry
 	const addEntry = async (data) => {
 		let uri = "http://localhost:3002/entries";
 		const res = await fetch(uri, {
@@ -133,7 +133,7 @@
 
 	// =====================================================================
 
-	// Add entry
+	// Handle delete entry
 	const deleteEntry = async (id) => {
 		let uri = `http://localhost:3002/entries/${id}`;
 		const res = await fetch(uri, {
