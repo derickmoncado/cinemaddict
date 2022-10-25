@@ -66,7 +66,7 @@
             padding-right: 8px;
           }
 
-          .currently-watching {
+          & > div {
             display: flex;
             flex-direction: column;
 
@@ -74,17 +74,17 @@
               flex-direction: row;
               flex-wrap: wrap;
             }
+          }
 
-            .entry {
-              @include entry;
+          .entry {
+            @include entry;
 
-              &:last-child {
-                margin-right: 0;
-              }
-  
-              &--button {
-                @include entry-btn;
-              }
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &--button {
+              @include entry-btn;
             }
           }
         }
