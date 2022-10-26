@@ -113,7 +113,6 @@ const fetchEntries = async () => {
 			</div>
 			`;
 	});
-
 	entryRow.innerHTML = template;
 };
 
@@ -131,6 +130,7 @@ const addEntry = async (data) => {
 		},
 		body: JSON.stringify(data)
 	});
+	fetchEntries();
 };
 
 // =====================================================================
