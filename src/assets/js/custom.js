@@ -107,7 +107,7 @@ const fetchEntries = async () => {
 				</div> q
 				<div class="entry__actions">
 					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn"><i class="bi bi-pencil-fill"></i></button>
-					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')"><i class="bi bi-trash-fill"></i></button>
+					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')" data-bs-target="#deleteEntryConfirmModal"><i class="bi bi-trash-fill"></i></button>
 				</div>
 				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
 			</div>
