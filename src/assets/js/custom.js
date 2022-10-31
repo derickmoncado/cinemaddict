@@ -48,6 +48,7 @@ const entryRow = document.querySelector(".currently-watching");
 const dismissBtn = document.querySelector(".dismissBtn");
 const editEntryBtn = document.getElementById('editEntryBtn');
 const deleteEntryBtn = document.getElementById('deleteEntryBtn');
+const deleteEntryConfirmModal = document.getElementById('deleteEntryConfirmModal');
 
 // =====================================================================
 
@@ -107,7 +108,7 @@ const fetchEntries = async () => {
 				</div> q
 				<div class="entry__actions">
 					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn"><i class="bi bi-pencil-fill"></i></button>
-					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')" data-bs-target="#deleteEntryConfirmModal"><i class="bi bi-trash-fill"></i></button>
+					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')" data-bs-target="#deleteEntryConfirmModal" data-bs-toggle="modal"><i class="bi bi-trash-fill"></i></button>
 				</div>
 				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
 			</div>
@@ -141,8 +142,8 @@ const deleteEntry = async (id) => {
 	const res = await fetch(uri, {
 		method: "DELETE"
 	});
-	alert("Entry deleted!");
 	fetchEntries();
+	deleteEntryConfirmModal.show();
 };
 
 // =====================================================================
