@@ -150,7 +150,25 @@ const deleteEntry = async (id) => {
 
 // Handle edit entry
 const editEntry = async (id) => {
-	console.log('editEntry clicked!');
+	console.log(`editEntry called!! and the id is: ${id}`);
+
+	let uri = `http://localhost:3002/entries/${id}`;
+	const res = await fetch(uri);
+	entryToEdit = await res.json();
+
+	console.log('entryToEdit:', entryToEdit)
+
+	//TODO:
+	// document.getElementById("entryTitle").value = "entryToEdit.entryTitle";
+	// document.getElementById("entryYear").value = "entryToEdit.entryYear";
+	// document.getElementById("entryGenre").value = "entryToEdit.entryGenre";
+	// document.getElementById("entryDirectedBy").value = "entryToEdit.entryDirectedBy";
+	// document.getElementById("entryStreamingOn").value = "entryToEdit.entryStreaminOn";
+	// document.getElementById("entryStatus").value = "entryToEdit.entryStatus";
+	// document.getElementById("entryMediaType1").value = "entryToEdit.entryMediaType1";
+	// document.getElementById("entryMediaType2").value = "entryToEdit.entryMediaType2";
+	// document.getElementById("entryMediaType3").value = "entryToEdit.entryMediaType3";
+	// document.getElementById("entryRunningTime").value = "entryToEdit.entryRunningTime";
 };
 
 // =====================================================================
