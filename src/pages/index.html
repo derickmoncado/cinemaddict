@@ -5,188 +5,196 @@ Title: home (index.html)
 
 <!--- Home - body --->
 <section id="app-home">
-  <div class="container">
+	<div class="container">
 
-    <!-- app -->
-    <div class="cinemaddict-app">
-      <div class="cinemaddict-app__inner">
+		<!-- app -->
+		<div class="cinemaddict-app">
+			<div class="cinemaddict-app__inner">
 
-        <!-- Header -->
-        <div class="cinemaddict-app__header">
-          <div class="cinemaddict-app__header__logo">
-            <img src="assets/images/cinemaddict-logo.png" alt="CinemaAddict" />
-            <p>Track your movies and shows</p>
-          </div>
-          <div class="cinemaddict-app__header__search">
-            <!-- search bar goes here -->
-          </div>
-          <div class="cinemaddict-app__header__add">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEntryModal"><i
-                class="bi bi-plus-circle-fill"></i>Add</button>
-          </div>
-        </div>
+				<!-- Header -->
+				<div class="cinemaddict-app__header">
+					<div class="cinemaddict-app__header__logo">
+						<img src="assets/images/cinemaddict-logo.png" alt="CinemaAddict" />
+						<p>Track your movies and shows</p>
+					</div>
+					<div class="cinemaddict-app__header__search">
+						<!-- search bar goes here -->
+					</div>
+					<div class="cinemaddict-app__header__add">
+						<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEntryModal"><i
+								class="bi bi-plus-circle-fill"></i>Add</button>
+					</div>
+				</div>
 
-        <div class="cinemaddict-app__body">
+				<div class="cinemaddict-app__body">
 
-          <!-- Row -->
-          <div class="cinemaddict-app__body__entry-row">
-            <p>Currently Watching</p>
-            <div class="currently-watching">
-              <!-- Entry gets dynamically inject here via JS -->
-            </div>
-          </div>
+					<!-- Row -->
+					<div class="cinemaddict-app__body__entry-row">
+						<p>Currently Watching</p>
+						<div class="currently-watching">
+							<!-- Entry gets dynamically inject here via JS -->
+						</div>
+					</div>
 
-          <!-- Row -->
-          <div class="cinemaddict-app__body__entry-row">
-            <p>Want to Watch</p>
-            <div class="want-to-watch">
-              <!-- Entry gets dynamically inject here via JS -->
-            </div>
-            <div class="entry entry--button">
-              <button class="add-entry-btn" type="button" data-bs-toggle="modal" data-bs-target="#addEntryModal"><i
-                  class="bi bi-plus"></i></button>
-            </div>
-          </div>
+					<!-- Row -->
+					<div class="cinemaddict-app__body__entry-row">
+						<p>Want to Watch</p>
+						<div class="want-to-watch">
+							<!-- Entry gets dynamically inject here via JS -->
+						</div>
+						<div class="entry entry--button">
+							<button class="add-entry-btn" type="button" data-bs-toggle="modal"
+								data-bs-target="#addEntryModal"><i class="bi bi-plus"></i></button>
+						</div>
+					</div>
 
-          <!-- Row -->
-          <div class="cinemaddict-app__body__entry-row">
-            <p>Finished Watching</p>
-            <div class="finished-watching">
-              <!-- Entry gets dynamically inject here via JS -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+					<!-- Row -->
+					<div class="cinemaddict-app__body__entry-row">
+						<p>Finished Watching</p>
+						<div class="finished-watching">
+							<!-- Entry gets dynamically inject here via JS -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Add Entry Modal -->
-    <div class="modal fade" id="addEntryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Entry</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
+		<!-- Add Entry Modal -->
+		<div class="modal fade" id="addEntryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Add Entry</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 
-            <!-- Form -->
-            <form class="row g-3 needs-validation" novalidate>
-              <div class="col-md-6">
-                <label for="entryTitle" class="form-label">Title*</label>
-                <input type="text" class="form-control" id="entryTitle" value="" placeholder="The Avengers" required>
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Please enter a title</div>
-              </div>
-              <div class="col-md-6">
-                <label for="entryYear" class="form-label">Year Released</label>
-                <input type="text" class="form-control" id="entryYear" value="" placeholder="2012">
-              </div>
-              <div class="col-md-6">
-                <label for="entryGenre" class="form-label">Genre</label>
-                <input type="text" class="form-control" id="entryGenre" placeholder="Action">
-              </div>
-              <div class="col-md-6">
-                <label for="entryDirectedBy" class="form-label">Directed By</label>
-                <input type="text" class="form-control" id="entryDirectedBy" placeholder="Joss Whedon">
-              </div>
-              <div class="col-md-12">
-                <label for="entryStreamingOn" class="form-label">Streaming On*</label>
-                <select class="form-select" id="entryStreamingOn" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option value="assets/images/streaming-logos/netflix.jpg">Netlfix</option>
-                  <option value="assets/images/streaming-logos/hulu.jpg">Hulu</option>
-                  <option value="assets/images/streaming-logos/disney-plus.jpg">Disney+</option>
-                  <option value="assets/images/streaming-logos/hbo-max.jpg">HBO Max</option>
-                  <option value="assets/images/streaming-logos/prime-video.jpg">Prime Video</option>
-                  <option value="assets/images/streaming-logos/paramount-plus.jpg">Paramount+</option>
-                  <option value="assets/images/streaming-logos/peacock.jpg">Peacock</option>
-                  <option value="assets/images/streaming-logos/apple-tv-plus.jpg">AppleTV+</option>
-                </select>
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Please select an option</div>
-              </div>
-              <div class="col-md-12">
-                <label for="entryStatus" class="form-label">Status*</label>
-                <select class="form-select" id="entryStatus" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>Currently Watching</option>
-                  <option>Want to Watch</option>
-                  <option>Finished Watching</option>
-                </select>
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Please select an option</div>
-              </div>
-              <div class="radio-btns col-6">
-                <p>Media Type*</p>
-                <div class="radio-btns__inner">
-                  <div class="form-check">
-                    <input type="radio" class="form-check-input" id="entryMediaType1" name="radio-stacked" value="Movie"
-                      required>
-                    <label class="form-check-label" for="entryMediaType1">Movie</label>
-                  </div>
-                  <div class="form-check">
-                    <input type="radio" class="form-check-input" id="entryMediaType2" name="radio-stacked"
-                      value="Series" required>
-                    <label class="form-check-label" for="entryMediaType2">Series</label>
-                  </div>
-                  <div class="form-check">
-                    <input type="radio" class="form-check-input" id="entryMediaType3" name="radio-stacked"
-                      value="Documentary" required>
-                    <label class="form-check-label" for="entryMediaType3">Documentary</label>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label for="entryRunningTime" class="form-label">Running Time</label>
-                <input type="text" class="form-control" id="entryRunningTime" placeholder="143 minutes">
-              </div>
-              <div class="modal-footer col-12">
-                <button class="btn btn-primary" type="submit" id="formSubmitBtn" data-bs-target="#addEntryConfirmModal"
-                  data-bs-toggle="modal"><i class="bi bi-check-circle-fill"></i>Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+						<!-- Form -->
+						<form class="row g-3 needs-validation" novalidate>
+							<div class="col-md-6">
+								<label for="entryTitle" class="form-label">Title*</label>
+								<input type="text" class="form-control" id="entryTitle" value=""
+									placeholder="The Avengers" required>
+								<div class="valid-feedback">Looks good!</div>
+								<div class="invalid-feedback">Please enter a title</div>
+							</div>
+							<div class="col-md-6">
+								<label for="entryYear" class="form-label">Year Released</label>
+								<input type="text" class="form-control" id="entryYear" value="" placeholder="2012">
+							</div>
+							<div class="col-md-6">
+								<label for="entryGenre" class="form-label">Genre</label>
+								<input type="text" class="form-control" id="entryGenre" placeholder="Action">
+							</div>
+							<div class="col-md-6">
+								<label for="entryDirectedBy" class="form-label">Directed By</label>
+								<input type="text" class="form-control" id="entryDirectedBy" placeholder="Joss Whedon">
+							</div>
+							<div class="col-md-12">
+								<label for="entryStreamingOn" class="form-label">Streaming On*</label>
+								<select class="form-select" id="entryStreamingOn" required>
+									<option selected disabled value="">Choose...</option>
+									<option value="assets/images/streaming-logos/netflix.jpg">Netlfix</option>
+									<option value="assets/images/streaming-logos/hulu.jpg">Hulu</option>
+									<option value="assets/images/streaming-logos/disney-plus.jpg">Disney+</option>
+									<option value="assets/images/streaming-logos/hbo-max.jpg">HBO Max</option>
+									<option value="assets/images/streaming-logos/prime-video.jpg">Prime Video</option>
+									<option value="assets/images/streaming-logos/paramount-plus.jpg">Paramount+</option>
+									<option value="assets/images/streaming-logos/peacock.jpg">Peacock</option>
+									<option value="assets/images/streaming-logos/apple-tv-plus.jpg">AppleTV+</option>
+								</select>
+								<div class="valid-feedback">Looks good!</div>
+								<div class="invalid-feedback">Please select an option</div>
+							</div>
+							<div class="col-md-12">
+								<label for="entryStatus" class="form-label">Status*</label>
+								<select class="form-select" id="entryStatus" required>
+									<option selected disabled value="">Choose...</option>
+									<option>Currently Watching</option>
+									<option>Want to Watch</option>
+									<option>Finished Watching</option>
+								</select>
+								<div class="valid-feedback">Looks good!</div>
+								<div class="invalid-feedback">Please select an option</div>
+							</div>
+							<div class="radio-btns col-6">
+								<p>Media Type*</p>
+								<div class="radio-btns__inner">
+									<div class="form-check">
+										<input type="radio" class="form-check-input" id="entryMediaType1"
+											name="radio-stacked" value="Movie" required>
+										<label class="form-check-label" for="entryMediaType1">Movie</label>
+									</div>
+									<div class="form-check">
+										<input type="radio" class="form-check-input" id="entryMediaType2"
+											name="radio-stacked" value="Series" required>
+										<label class="form-check-label" for="entryMediaType2">Series</label>
+									</div>
+									<div class="form-check">
+										<input type="radio" class="form-check-input" id="entryMediaType3"
+											name="radio-stacked" value="Documentary" required>
+										<label class="form-check-label" for="entryMediaType3">Documentary</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="entryRunningTime" class="form-label">Running Time</label>
+								<input type="text" class="form-control" id="entryRunningTime" placeholder="143 minutes">
+							</div>
+							<div class="modal-footer col-12">
+								<button class="btn btn-primary" type="submit" id="formSubmitBtn"
+									data-bs-target="#addEntryConfirmModal" data-bs-toggle="modal"><i
+										class="bi bi-check-circle-fill"></i>Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Confirm modal - ADD entry -->
-    <div class="modal fade" id="addEntryConfirmModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Entry <i class="bi bi-check-circle-fill"></i></h5>
-            <button type="button" class="btn-close dismissBtn" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>You successfully ADDED your entry!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" class="dismissBtn" data-bs-dismiss="modal">Dismiss</button>
-          </div>
-        </div>
-      </div>
-    </div>
+		<!-- Confirm modal - ADD entry -->
+		<div class="modal fade" id="addEntryConfirmModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Add Entry <i class="bi bi-check-circle-fill"></i>
+						</h5>
+						<button type="button" class="btn-close dismissBtn" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>You successfully ADDED your entry!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary" class="dismissBtn"
+							data-bs-dismiss="modal">Dismiss</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Confirm modal - DELETE entry -->
-    <div class="modal fade" id="deleteEntryConfirmModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Entry Deleted! <i class="bi bi-trash-fill"></i></h5>
-            <button type="button" class="btn-close dismissBtn" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>You successfully DELETED your entry!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" class="dismissBtn" data-bs-dismiss="modal">Dismiss</button>
-          </div>
-        </div>
-      </div>
-    </div>
+		<!-- Confirm modal - DELETE entry -->
+		<div class="modal fade" id="deleteEntryConfirmModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Entry Deleted! <i class="bi bi-trash-fill"></i>
+						</h5>
+						<button type="button" class="btn-close dismissBtn" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>You successfully DELETED your entry!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary" class="dismissBtn"
+							data-bs-dismiss="modal">Dismiss</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  </div>
+	</div>
 </section>
