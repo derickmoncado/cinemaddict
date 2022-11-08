@@ -49,6 +49,7 @@ const dismissBtn = document.querySelector(".dismissBtn");
 const editEntryBtn = document.getElementById('editEntryBtn');
 const deleteEntryBtn = document.getElementById('deleteEntryBtn');
 const deleteEntryConfirmModal = document.getElementById('deleteEntryConfirmModal');
+let entryToEdit = "";
 
 // =====================================================================
 
@@ -107,7 +108,7 @@ const fetchEntries = async () => {
 					<span>${entry.entryMediaType}</span>
 				</div> q
 				<div class="entry__actions">
-					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn" onclick="editEntry('${entry.id}')"><i class="bi bi-pencil-fill"></i></button>
+					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn" onclick="editEntry('${entry.id}')" data-bs-target="#addEntryModal" data-bs-toggle="modal"><i class="bi bi-pencil-fill"></i></button>
 					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')" data-bs-target="#deleteEntryConfirmModal" data-bs-toggle="modal"><i class="bi bi-trash-fill"></i></button>
 				</div>
 				<div class="entry__streaming-on" style="background-image: url('${entry.entryStreamingOn}')"></div> 
@@ -158,17 +159,16 @@ const editEntry = async (id) => {
 
 	console.log('entryToEdit:', entryToEdit)
 
-	//TODO:
-	// document.getElementById("entryTitle").value = "entryToEdit.entryTitle";
-	// document.getElementById("entryYear").value = "entryToEdit.entryYear";
-	// document.getElementById("entryGenre").value = "entryToEdit.entryGenre";
-	// document.getElementById("entryDirectedBy").value = "entryToEdit.entryDirectedBy";
-	// document.getElementById("entryStreamingOn").value = "entryToEdit.entryStreaminOn";
-	// document.getElementById("entryStatus").value = "entryToEdit.entryStatus";
-	// document.getElementById("entryMediaType1").value = "entryToEdit.entryMediaType1";
-	// document.getElementById("entryMediaType2").value = "entryToEdit.entryMediaType2";
-	// document.getElementById("entryMediaType3").value = "entryToEdit.entryMediaType3";
-	// document.getElementById("entryRunningTime").value = "entryToEdit.entryRunningTime";
+	document.getElementById("entryTitle").value = entryToEdit.entryTitle;
+	document.getElementById("entryYear").value = entryToEdit.entryYear;
+	document.getElementById("entryGenre").value = entryToEdit.entryGenre;
+	document.getElementById("entryDirectedBy").value = entryToEdit.entryDirectedBy;
+	document.getElementById("entryStreamingOn").value = entryToEdit.entryStreaminOn;
+	document.getElementById("entryStatus").value = entryToEdit.entryStatus;
+	document.getElementById("entryMediaType1").value = entryToEdit.entryMediaType1;
+	document.getElementById("entryMediaType2").value = entryToEdit.entryMediaType2;
+	document.getElementById("entryMediaType3").value = entryToEdit.entryMediaType3;
+	document.getElementById("entryRunningTime").value = entryToEdit.entryRunningTime;
 };
 
 // =====================================================================
