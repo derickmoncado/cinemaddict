@@ -66,7 +66,7 @@ const readFormData = () => {
 	formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
 	formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
 	formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
-	//formData["id"] = document.getElementById("wineID").value || "";
+	formData["id"] = document.getElementById("entryId").value || "";
 	return formData;
 };
 
@@ -157,7 +157,7 @@ const editEntry = async (id) => {
 	const res = await fetch(uri);
 	entryToEdit = await res.json();
 
-	console.log('entryToEdit:', entryToEdit)
+	console.log('entry that will edited:', entryToEdit)
 
 	document.getElementById("entryTitle").value = entryToEdit.entryTitle;
 	document.getElementById("entryYear").value = entryToEdit.entryYear;
@@ -169,6 +169,21 @@ const editEntry = async (id) => {
 	document.getElementById("entryMediaType2").value = entryToEdit.entryMediaType2;
 	document.getElementById("entryMediaType3").value = entryToEdit.entryMediaType3;
 	document.getElementById("entryRunningTime").value = entryToEdit.entryRunningTime;
+	document.getElementById("entryId").value = entryToEdit.id;
+};
+
+// =====================================================================
+
+// Handle update entry
+const updateEntry = async (data) => {
+	let uri = `http://localhost:3002/entries/${document.getElementById("entryId").value}`;
+	const res = await fetch(uri, {
+		method: "PUT",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(readFormData())
+	});
 };
 
 // =====================================================================
@@ -176,12 +191,32 @@ const editEntry = async (id) => {
 // On form submit
 formSubmitBtn.addEventListener("click", (e) => {
 	console.log("formSubmit clicked!");
-	e.preventDefault();
-	readFormData();
-	addEntry(readFormData());
-	console.log("Log form data:", readFormData());
-	resetForm();
-	fetchEntries();
+
+	// if wine id is present, update wine
+	if (document.getElementById("entryId").value === entryToEdit.id) {
+		console.log("IF statement ran - TRUE");
+		updateEntry(readFormData());
+		fetchEntries();
+		//alert('entry was updated B');
+		resetForm();
+	} else {
+		console.log("ELSE statement ran - FALSE");
+		e.preventDefault();
+		readFormData();
+		addEntry(readFormData());
+		console.log("Log form data:", readFormData());
+		resetForm();
+		fetchEntries();
+	}
+
+
+	// console.log("formSubmit clicked!");
+	// e.preventDefault();
+	// readFormData();
+	// addEntry(readFormData());
+	// console.log("Log form data:", readFormData());
+	// resetForm();
+	// fetchEntries();
 });
 
 // On dismiss button click

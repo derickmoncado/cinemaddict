@@ -13,30 +13,30 @@
       "entryRunningTime": "2hrs 30mins"
     },
     {
-      "entryTitle": "adf",
-      "entryYear": "",
-      "entryGenre": "",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "",
-      "entryStatus": "",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
-      "entryRunningTime": "",
-      "id": "0vB8WwJ"
-    },
-    {
-      "entryTitle": "The Lighthouse",
+      "entryTitle": "The Lighthouseeeeeee",
       "entryYear": "2019",
       "entryGenre": "Mystery",
       "entryDirectedBy": "",
-      "entryStreamingOn": "assets/images/streaming-logos/hbo-max.jpg",
+      "entryStreamingOn": "",
       "entryStatus": "Want to Watch",
       "entryMediaType1": "",
       "entryMediaType2": "",
       "entryMediaType3": "",
       "entryRunningTime": "",
       "id": "nf4uv5b"
+    },
+    {
+      "entryTitle": "The Mummy Returns",
+      "entryYear": "2001",
+      "entryGenre": "Action",
+      "entryDirectedBy": "Rob Cohen",
+      "entryStreamingOn": "",
+      "entryStatus": "Currently Watching",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "zDDsIzI"
     }
   ]
 }
