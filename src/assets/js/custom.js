@@ -62,7 +62,8 @@ const readFormData = () => {
 	formData["entryDirectedBy"] = document.getElementById("entryDirectedBy").value;
 	formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
 	formData["entryStatus"] = document.getElementById("entryStatus").value;
-	formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
+	//formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
+	formData["entryMediaType1"] = document.querySelector('input[name="entryMediaType1"]:checked').value;
 	formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
 	formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
 	formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
@@ -106,7 +107,7 @@ const fetchEntries = async () => {
 					<span>${entry.entryYear}</span>
 					<span>${entry.entryGenre}</span>
 					<span>${entry.entryMediaType}</span>
-				</div> q
+				</div>
 				<div class="entry__actions">
 					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn" onclick="editEntry('${entry.id}')" data-bs-target="#addEntryModal" data-bs-toggle="modal"><i class="bi bi-pencil-fill"></i></button>
 					<button type="button" data-entry-id="${entry.id}" id="deleteEntryBtn" onclick="deleteEntry('${entry.id}')" data-bs-target="#deleteEntryConfirmModal" data-bs-toggle="modal"><i class="bi bi-trash-fill"></i></button>
