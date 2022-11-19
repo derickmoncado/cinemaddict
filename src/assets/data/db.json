@@ -13,30 +13,43 @@
       "entryRunningTime": "2hrs 30mins"
     },
     {
-      "entryTitle": "The Lighthouseeeeeee",
-      "entryYear": "2019",
-      "entryGenre": "Mystery",
-      "entryDirectedBy": "",
-      "entryStreamingOn": "",
-      "entryStatus": "Want to Watch",
-      "entryMediaType1": "",
-      "entryMediaType2": "",
-      "entryMediaType3": "",
-      "entryRunningTime": "",
-      "id": "nf4uv5b"
-    },
-    {
       "entryTitle": "The Mummy Returns",
-      "entryYear": "2001",
+      "entryYear": "2000",
       "entryGenre": "Action",
       "entryDirectedBy": "Rob Cohen",
       "entryStreamingOn": "",
-      "entryStatus": "Currently Watching",
+      "entryStatus": "Finished Watching",
       "entryMediaType1": "Movie",
       "entryMediaType2": "Series",
       "entryMediaType3": "Documentary",
       "entryRunningTime": "",
       "id": "zDDsIzI"
+    },
+    {
+      "entryTitle": "Andor",
+      "entryYear": "2022",
+      "entryGenre": "Sci Fi",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "assets/images/streaming-logos/disney-plus.jpg",
+      "entryStatus": "Currently Watching",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "p3yDmxi"
+    },
+    {
+      "entryTitle": "This Fool",
+      "entryYear": "2022",
+      "entryGenre": "Comedy",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "assets/images/streaming-logos/hulu.jpg",
+      "entryStatus": "Currently Watching",
+      "entryMediaType1": "",
+      "entryMediaType2": "",
+      "entryMediaType3": "",
+      "entryRunningTime": "",
+      "id": "5Wi-cF9"
     }
   ]
 }
