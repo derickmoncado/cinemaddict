@@ -58,9 +58,7 @@
       "entryDirectedBy": "Paul Thomas Anderson",
       "entryStreamingOn": "",
       "entryStatus": "Currently Watching",
-      "entryMediaType1": "Movie",
-      "entryMediaType2": "Series",
-      "entryMediaType3": "Documentary",
+      "entryMediaType": "undefined",
       "entryRunningTime": "",
       "id": "tfYzTtr"
     }
