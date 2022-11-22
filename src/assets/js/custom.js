@@ -62,12 +62,13 @@ const readFormData = () => {
 	formData["entryDirectedBy"] = document.getElementById("entryDirectedBy").value;
 	formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
 	formData["entryStatus"] = document.getElementById("entryStatus").value;
-	//formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
-	formData["entryMediaType1"] = document.querySelector('input[name="entryMediaType1"]:checked').value;
+	//formData["entryMediaType1"] = document.querySelector('input[name="entryMediaType"]:checked').value;
+	formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
 	formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
 	formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
 	formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
 	formData["id"] = document.getElementById("entryId").value || "";
+	console.log('FORM OBJECT:', formData);
 	return formData;
 };
 
@@ -106,7 +107,9 @@ const fetchEntries = async () => {
 					<span>${entry.entryTitle}</span>
 					<span>${entry.entryYear}</span>
 					<span>${entry.entryGenre}</span>
-					<span>${entry.entryMediaType}</span>
+					<span class="media-type">${entry.entryMediaType1}</span>
+					<span class="media-type">${entry.entryMediaType2}</span>
+					<span class="media-type">${entry.entryMediaType3}</span>
 				</div>
 				<div class="entry__actions">
 					<button type="button" data-entry-id="${entry.id}" id="editEntryBtn" onclick="editEntry('${entry.id}')" data-bs-target="#addEntryModal" data-bs-toggle="modal"><i class="bi bi-pencil-fill"></i></button>
@@ -198,7 +201,6 @@ formSubmitBtn.addEventListener("click", (e) => {
 		console.log("IF statement ran - TRUE");
 		updateEntry(readFormData());
 		fetchEntries();
-		//alert('entry was updated B');
 		resetForm();
 	} else {
 		console.log("ELSE statement ran - FALSE");

@@ -13,8 +13,8 @@
       "entryRunningTime": "2hrs 30mins"
     },
     {
-      "entryTitle": "The Mummy Returns",
-      "entryYear": "2000",
+      "entryTitle": "The Mummy",
+      "entryYear": "1999",
       "entryGenre": "Action",
       "entryDirectedBy": "Rob Cohen",
       "entryStreamingOn": "",
@@ -50,6 +50,19 @@
       "entryMediaType3": "",
       "entryRunningTime": "",
       "id": "5Wi-cF9"
+    },
+    {
+      "entryTitle": "There Will Be Blood",
+      "entryYear": "2007",
+      "entryGenre": "Drama",
+      "entryDirectedBy": "Paul Thomas Anderson",
+      "entryStreamingOn": "",
+      "entryStatus": "Currently Watching",
+      "entryMediaType1": "Movie",
+      "entryMediaType2": "Series",
+      "entryMediaType3": "Documentary",
+      "entryRunningTime": "",
+      "id": "tfYzTtr"
     }
   ]
 }
