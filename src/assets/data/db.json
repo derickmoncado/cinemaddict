@@ -52,15 +52,26 @@
       "id": "5Wi-cF9"
     },
     {
-      "entryTitle": "There Will Be Blood",
-      "entryYear": "2007",
-      "entryGenre": "Drama",
-      "entryDirectedBy": "Paul Thomas Anderson",
+      "entryTitle": "test",
+      "entryYear": "",
+      "entryGenre": "",
+      "entryDirectedBy": "",
       "entryStreamingOn": "",
-      "entryStatus": "Currently Watching",
-      "entryMediaType": "undefined",
+      "entryStatus": "",
+      "entryMediaType": "Movie",
       "entryRunningTime": "",
-      "id": "tfYzTtr"
+      "id": "ZI2gQQ2"
+    },
+    {
+      "entryTitle": "test 2",
+      "entryYear": "",
+      "entryGenre": "",
+      "entryDirectedBy": "",
+      "entryStreamingOn": "",
+      "entryStatus": "",
+      "entryMediaType": "Series",
+      "entryRunningTime": "",
+      "id": "0mDOenP"
     }
   ]
 }

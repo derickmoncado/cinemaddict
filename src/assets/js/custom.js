@@ -63,9 +63,6 @@ const readFormData = () => {
 	formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
 	formData["entryStatus"] = document.getElementById("entryStatus").value;
 	formData["entryMediaType"] = document.querySelector('input[name="entryMediaType"]:checked').value;
-	//formData["entryMediaType1"] = document.getElementById("entryMediaType1").value;
-	//formData["entryMediaType2"] = document.getElementById("entryMediaType2").value;
-	//formData["entryMediaType3"] = document.getElementById("entryMediaType3").value;
 	formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
 	formData["id"] = document.getElementById("entryId").value || "";
 	return formData;
@@ -81,9 +78,10 @@ const resetForm = () => {
 	document.getElementById("entryDirectedBy").value = "";
 	document.getElementById("entryStreamingOn").value = "";
 	document.getElementById("entryStatus").value = "";
-	document.getElementById("entryMediaType1").value = "";
-	document.getElementById("entryMediaType2").value = "";
-	document.getElementById("entryMediaType3").value = "";
+	document.querySelector("entryMediaType").value = "";
+	// document.getElementById("entryMediaType1").value = "";
+	// document.getElementById("entryMediaType2").value = "";
+	// document.getElementById("entryMediaType3").value = "";
 	document.getElementById("entryRunningTime").value = "";
 }
 
@@ -166,9 +164,10 @@ const editEntry = async (id) => {
 	document.getElementById("entryDirectedBy").value = entryToEdit.entryDirectedBy;
 	document.getElementById("entryStreamingOn").value = entryToEdit.entryStreaminOn;
 	document.getElementById("entryStatus").value = entryToEdit.entryStatus;
-	document.getElementById("entryMediaType1").value = entryToEdit.entryMediaType1;
-	document.getElementById("entryMediaType2").value = entryToEdit.entryMediaType2;
-	document.getElementById("entryMediaType3").value = entryToEdit.entryMediaType3;
+	document.querySelector("entryMediaType").value = entryToEdit.entryMediaType;
+	// document.getElementById("entryMediaType1").value = entryToEdit.entryMediaType1;
+	// document.getElementById("entryMediaType2").value = entryToEdit.entryMediaType2;
+	// document.getElementById("entryMediaType3").value = entryToEdit.entryMediaType3;
 	document.getElementById("entryRunningTime").value = entryToEdit.entryRunningTime;
 	document.getElementById("entryId").value = entryToEdit.id;
 };
