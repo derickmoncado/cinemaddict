@@ -49,6 +49,7 @@ const dismissBtn = document.querySelector(".dismissBtn");
 const editEntryBtn = document.getElementById('editEntryBtn');
 const deleteEntryBtn = document.getElementById('deleteEntryBtn');
 const deleteEntryConfirmModal = document.getElementById('deleteEntryConfirmModal');
+const streamingOnDropdown = document.getElementById('entryStreamingOn');
 let entryToEdit = "";
 
 // =====================================================================
@@ -62,7 +63,7 @@ const readFormData = () => {
 	formData["entryDirectedBy"] = document.getElementById("entryDirectedBy").value;
 	formData["entryStreamingOn"] = document.getElementById("entryStreamingOn").value;
 	formData["entryStatus"] = document.getElementById("entryStatus").value;
-	formData["entryMediaType"] = document.querySelector('input[name="entryMediaType"]:checked').value;
+	//formData["entryMediaType"] = document.querySelector('input[name="entryMediaType"]:checked').value;
 	formData["entryRunningTime"] = document.getElementById("entryRunningTime").value;
 	formData["id"] = document.getElementById("entryId").value || "";
 	return formData;
@@ -78,10 +79,7 @@ const resetForm = () => {
 	document.getElementById("entryDirectedBy").value = "";
 	document.getElementById("entryStreamingOn").value = "";
 	document.getElementById("entryStatus").value = "";
-	document.querySelector("entryMediaType").value = "";
-	// document.getElementById("entryMediaType1").value = "";
-	// document.getElementById("entryMediaType2").value = "";
-	// document.getElementById("entryMediaType3").value = "";
+	//document.querySelector("entryMediaType").value = "";
 	document.getElementById("entryRunningTime").value = "";
 }
 
@@ -156,7 +154,14 @@ const editEntry = async (id) => {
 	const res = await fetch(uri);
 	entryToEdit = await res.json();
 
-	console.log('entry that will edited:', entryToEdit)
+	console.log('heres the entry that will edited:', entryToEdit);
+
+	// TODO... 
+	/* (need to figure this out, need to get the form to repopulate 
+		with the selected value of the dropdown for Streaming On)*/
+	const selectEl = document.getElementById('entryStreamingOn');
+	let value = selectEl.options[selectEl.selectedIndex].value;
+	console.log('what is this?', value);
 
 	document.getElementById("entryTitle").value = entryToEdit.entryTitle;
 	document.getElementById("entryYear").value = entryToEdit.entryYear;
@@ -165,9 +170,6 @@ const editEntry = async (id) => {
 	document.getElementById("entryStreamingOn").value = entryToEdit.entryStreaminOn;
 	document.getElementById("entryStatus").value = entryToEdit.entryStatus;
 	//document.querySelector("entryMediaType").value = entryToEdit.entryMediaType;
-	// document.getElementById("entryMediaType1").value = entryToEdit.entryMediaType1;
-	// document.getElementById("entryMediaType2").value = entryToEdit.entryMediaType2;
-	// document.getElementById("entryMediaType3").value = entryToEdit.entryMediaType3;
 	document.getElementById("entryRunningTime").value = entryToEdit.entryRunningTime;
 	document.getElementById("entryId").value = entryToEdit.id;
 };
