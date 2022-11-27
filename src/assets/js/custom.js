@@ -164,7 +164,7 @@ const editEntry = async (id) => {
 	document.getElementById("entryDirectedBy").value = entryToEdit.entryDirectedBy;
 	document.getElementById("entryStreamingOn").value = entryToEdit.entryStreaminOn;
 	document.getElementById("entryStatus").value = entryToEdit.entryStatus;
-	document.querySelector("entryMediaType").value = entryToEdit.entryMediaType;
+	//document.querySelector("entryMediaType").value = entryToEdit.entryMediaType;
 	// document.getElementById("entryMediaType1").value = entryToEdit.entryMediaType1;
 	// document.getElementById("entryMediaType2").value = entryToEdit.entryMediaType2;
 	// document.getElementById("entryMediaType3").value = entryToEdit.entryMediaType3;
@@ -192,7 +192,7 @@ const updateEntry = async (data) => {
 formSubmitBtn.addEventListener("click", (e) => {
 	console.log("formSubmit clicked!");
 
-	// if wine id is present, update wine
+	// if entry ID is present, update entry
 	if (document.getElementById("entryId").value === entryToEdit.id) {
 		console.log("IF statement ran - TRUE");
 		updateEntry(readFormData());
@@ -207,21 +207,4 @@ formSubmitBtn.addEventListener("click", (e) => {
 		resetForm();
 		fetchEntries();
 	}
-
-
-	// console.log("formSubmit clicked!");
-	// e.preventDefault();
-	// readFormData();
-	// addEntry(readFormData());
-	// console.log("Log form data:", readFormData());
-	// resetForm();
-	// fetchEntries();
 });
-
-// On dismiss button click
-// dismissBtn.addEventListener("click", (e) => {
-// 	console.log("dismissBtn clicked!");
-// 	e.preventDefault();
-// 	resetForm();
-// 	fetchEntries();
-// });
