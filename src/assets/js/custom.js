@@ -79,7 +79,7 @@ const resetForm = () => {
 	document.getElementById("entryDirectedBy").value = "";
 	document.getElementById("entryStreamingOn").value = "";
 	document.getElementById("entryStatus").value = "";
-	//document.querySelector("entryMediaType").value = "";
+	document.querySelector("entryMediaType").value = "";
 	document.getElementById("entryRunningTime").value = "";
 }
 
